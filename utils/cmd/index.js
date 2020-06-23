@@ -5,15 +5,15 @@ module.exports.exec = (cmd, opt = {}) => {
     return new Promise((resolve, reject) => {
       try {
         exec(cmd, opt, (err, stdout, stderr) => {
-            
             if (!err) {
                 resolve({stdout, stderr})
             } else {
-                resolve({syserr: err, stdout, stderr})
+                resolve({err, stdout, stderr})
             }
         })
       } catch (err) {
         plog.log(err, 5);
+        reject({err})
       }
         
     })

@@ -1,3 +1,10 @@
+/*
+ * @Author: Tate
+ * @Date: 1985-10-26 16:15:00
+ * @LastEditors: Tate
+ * @LastEditTime: 2020-06-23 14:48:04
+ * @Description: 
+ */ 
 
 const path = require('path');
 module.exports.confDir = path.resolve(__dirname, './conf.json')
@@ -15,7 +22,7 @@ module.exports.logDefault = {
     des: true
 }
 module.exports.oraDefault = {
-    txt: "we are trying, please wait...",
+    text: "we are trying, please wait...",
     prefixText: "",
     color: "cyan"
 }

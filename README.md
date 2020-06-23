@@ -40,7 +40,7 @@ daily node utils.
  path:String  json文件的路径    
 * 返回值  Promise
 ```js
-    upJson((jsonData) => {
+    json.upJson((jsonData) => {
         jsonData.name = 'test';
         return jsonData;
     }, './test.json')
@@ -52,10 +52,10 @@ daily node utils.
  key:String  需要读取的key    
 * 返回值  String
 ```js
-    readJson('./package.json')
+    json.readJson('./package.json')
 ```
 ```js
-    readJson('./package.json', 'version')
+    json.readJson('./package.json', 'version')
 ```
 
 ### json.appendJson(path, dataObj)
@@ -64,7 +64,7 @@ daily node utils.
  dataObj:Object  需要为文件追加的数据     
 * 返回值  Boolean   
 ```js
-    appendJson('./package.json', {
+    json.appendJson('./package.json', {
         test: 'test str'
     })
 ```
@@ -100,6 +100,17 @@ daily node utils.
     })
 ```
 
+### new print.LogPromise(pro, opt)
+* 参数  
+ pro:Promise 
+ opt:Object  LogLoading 的配置项      
+* 返回值  LogLoading实例    
+```js
+    new LogPromise(pro, 'initing ...');
+    new LogPromise(pro, opt);
+```
+
+
 ## SSH
 ```js
     const {ssh} =  require('pomelo-toolbox');
@@ -109,7 +120,7 @@ daily node utils.
  opt:Object  配置项      
 * 返回值  Promise 
 ```js
-    ssh({
+    ssh.ssh({
         host: '192.168.1.111',
         port: '8888',
         username: 'root',
@@ -127,7 +138,7 @@ daily node utils.
  cb:Function  异步函数      
 * 返回值  Promise 
 ```js
-    next((resolve) => {
+    step.next((resolve) => {
         if (..) {
             resolve(true)
         }
@@ -139,5 +150,5 @@ daily node utils.
  cb:Function  延时结束后回调      
 * 返回值  Promise 
 ```js
-    await sleep(3000)
+    await step.sleep(3000)
 ```
