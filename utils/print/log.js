@@ -49,7 +49,7 @@ class Plog {
                     target,
                     prefix: this.opt.prefix,
                     msgChalk: chalk.rgb(0, 255, 204),
-                    des: this.opt.des ? chalk.bgRgb(0, 255, 204).white('finish') : ''
+                    des: this.opt.des ? chalk.bgRgb(0, 255, 204).black('finish') : ''
                 });
                 break;
             case 'warn':
