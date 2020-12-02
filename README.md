@@ -1,10 +1,19 @@
 # pomelo-toolbox
 daily node utils.
+
+## features
+
+* prettier command line
+* json tools
+* ssh tools
+* logger & loading
+
 ```js
     const {cmd} = require('pomelo-toolbox');
 ```
+## API
 
-## cmd.exec
+### cmd.exec
 
 * 参数
 
@@ -20,7 +29,7 @@ daily node utils.
 await cmd.exec(cmd, opt)
 ```
 
-## cmd.classify
+### cmd.classify
 
 * 参数
 
@@ -45,13 +54,13 @@ await cmd.exec(cmd, opt)
 cmd.classify(process.argv)
 ```
 
-## Json
+### Json
 
 ```js
 const {json} = require('pomelo-toolbox');
 ```
 
-### json.upJson
+#### json.upJson
 
 * 参数
 
@@ -69,7 +78,7 @@ const {json} = require('pomelo-toolbox');
         }, './test.json')
     ```
 
-### json.readJson
+#### json.readJson
 
 * 参数
 
@@ -88,7 +97,7 @@ const {json} = require('pomelo-toolbox');
     json.readJson('./package.json', 'version')
 ```
 
-### json.appendJson(path, dataObj)
+#### json.appendJson(path, dataObj)
 
 * 参数
 | param | type | description |
@@ -104,17 +113,17 @@ const {json} = require('pomelo-toolbox');
     })
 ```
 
-### json.writeJson
+#### json.writeJson
 
 说明同appendJson相同， 但writeJson为全量覆盖   
 
-## Print
+### Print
 
 ```js
     const {print} = require('pomelo-toolbox')
 ```
 
-### print.Plog
+#### print.Plog
 
 * 参数
 
@@ -132,7 +141,7 @@ const {json} = require('pomelo-toolbox');
     })
 ```
 
-### print.LogLoading
+#### print.LogLoading
 
 * 参数
 
@@ -151,7 +160,7 @@ const {json} = require('pomelo-toolbox');
     })
 ```
 
-### print.LogPromise
+#### print.LogPromise
 
 * 参数
 | param | type | description |
@@ -167,13 +176,13 @@ const {json} = require('pomelo-toolbox');
     new LogPromise(pro, opt);
 ```
 
-## SSH
+### SSH
 
 ```js
     const {ssh} =  require('pomelo-toolbox');
 ```
 
-### ssh.ssh
+#### ssh.ssh
 
 * 参数
 
@@ -192,13 +201,13 @@ const {json} = require('pomelo-toolbox');
     })
 ```
 
-## Step
+### Step
 
 ```js
     const {step} = require('pomelo-toolbox');
 ```
 
-### step.next
+#### step.next
 
 * 参数
 
@@ -216,7 +225,7 @@ const {json} = require('pomelo-toolbox');
     })
 ```
 
-### step.sleep
+#### step.sleep
 
 * 参数
 | param | type | description |
